@@ -1,0 +1,7 @@
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\bin\Debug\static methods in structures.exe.config
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\bin\Debug\static methods in structures.exe
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\bin\Debug\static methods in structures.pdb
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\obj\Debug\static methods in structures.csproj.AssemblyReference.cache
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\obj\Debug\static methods in structures.csproj.CoreCompileInputs.cache
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\obj\Debug\static methods in structures.exe
+C:\Users\megha\OneDrive\Desktop\.Net all programs\static methods in structures\static methods in structures\obj\Debug\static methods in structures.pdb
