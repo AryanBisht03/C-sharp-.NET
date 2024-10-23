@@ -1,0 +1,7 @@
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\obj\Debug\struct in c#.csproj.AssemblyReference.cache
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\obj\Debug\struct in c#.csproj.CoreCompileInputs.cache
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\bin\Debug\struct in c#.exe.config
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\bin\Debug\struct in c#.exe
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\bin\Debug\struct in c#.pdb
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\obj\Debug\struct in c#.exe
+C:\Users\megha\OneDrive\Desktop\.Net all programs\struct in c#\struct in c#\obj\Debug\struct in c#.pdb

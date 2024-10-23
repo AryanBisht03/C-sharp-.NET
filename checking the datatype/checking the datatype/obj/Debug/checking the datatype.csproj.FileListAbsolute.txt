@@ -1,0 +1,7 @@
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\bin\Debug\checking the datatype.exe.config
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\bin\Debug\checking the datatype.exe
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\bin\Debug\checking the datatype.pdb
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\obj\Debug\checking the datatype.csproj.AssemblyReference.cache
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\obj\Debug\checking the datatype.csproj.CoreCompileInputs.cache
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\obj\Debug\checking the datatype.exe
+C:\Users\megha\OneDrive\Desktop\.Net all programs\checking the datatype\checking the datatype\obj\Debug\checking the datatype.pdb
