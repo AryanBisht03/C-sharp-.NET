@@ -1,0 +1,101 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace Reusability
+{
+    class Reusable
+    {
+        protected int id;
+        protected string name;
+        protected string address;
+        protected long phonenumber;
+        public Reusable(int id,string name,string address,long phonenumber)
+        {
+            this.id = id;
+            this.name = name;   
+            this.address = address;
+            this.phonenumber = phonenumber;
+        }
+    }
+
+    class Student:Reusable
+    {
+        string classs;
+        int marks;
+        char grade;
+        long fees;
+        public Student(int id, string name, string address, long phonenumber, string classs, int marks, char grade, long fees) : base(id, name, address, phonenumber)
+        {
+            
+                this.classs = classs;
+                this.marks = marks;
+                this.grade = grade;
+                this.fees = fees;
+     
+        }
+        public void display_student()
+        {
+         
+            Console.WriteLine($"The id of the student is {id}\nThe name of the student is {name}\nThe address of the student is {address}\nThe phone number of the student is {phonenumber}\nThe class of student is {classs}\nThe marks of the student is {marks}\nThe grade of the student is {grade}\nThe fees of the student is {fees}");
+    }
+}
+class TeachingStaff:Reusable
+{
+    string designation;
+    long salary;
+    string qualification;
+    string subject;
+        public TeachingStaff(int id, string name, string address, long phonenumber, string designation, long salary, string qualification, string subject):base(id,name,address,phonenumber)
+        {
+            this.designation = designation;
+            this.salary = salary;
+            this.qualification = qualification;
+            this.subject = subject;
+        }
+        public void dispay_teacher()
+        {
+            Console.WriteLine($"The id of the Teacher is {id}\nThe name of the Teacher is {name}\nThe address of the Teacher is {address}\nThe phone number of the Teacher is {phonenumber}\nThe Designation of Teacher is {designation}\nThe Salary of the Teacher is {salary}\nThe qualification of the Teacher is {qualification}\nThe Subject of the Teacher is {subject}");
+        }
+    }
+
+    class Nonteachingstaff:Reusable
+    {
+        string designation;
+        long salary;
+        string departmentname;
+        int idd;
+        public Nonteachingstaff(int id, string name, string address, long phonenumber, string designation, long salary, string departmentname, int idd):base(id,name,address,phonenumber)
+        {
+            this.designation = designation;
+            this.salary = salary;
+            this.departmentname = departmentname;
+            this.idd = idd;
+        }
+        public void dispay_nonteacher()
+        {
+            Console.WriteLine($"The id of the Teacher is {id}\nThe name of the Teacher is {name}\nThe address of the Teacher is {address}\nThe phone number of the Teacher is {phonenumber}\nThe Designation of Teacher is {designation}\nThe Salary of the Teacher is {salary}\nThe Departmentname of the Teacher is {departmentname}\nThe Id of the Teacher is {idd}");
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+                Student s1 = new Student(1, "Aryan", "JUHU,Mumbai",8006011029,"PG-DAC",61,'A',114000);
+            s1.display_student();
+            Console.ReadLine();
+            TeachingStaff t1 =new TeachingStaff(1,"Pooja","Thane,Mumbai",9808008093,"Maths Teacher",23000,"MSC IT","Maths");
+            t1.dispay_teacher();
+            Console.ReadLine();
+            Nonteachingstaff nt1 = new Nonteachingstaff(1,"Megha","Selakui,Dehradun",7897653425,"Tech Lead",2300000,"DBMS",234);
+            nt1.dispay_nonteacher();
+        }
+    }
+}
