@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Matrixusingoperatoroverloading
+{
+    class Matrix
+    {
+        public int a;
+        public int b;
+        public int c;
+        public int d;
+        public Matrix(int a,int b,int c,int d)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d; 
+        }
+
+        public override string ToString()
+        {
+            return a+"  "+ b+"\n" + c+"  " + d+"\n";
+        }
+        public static Matrix operator +(Matrix obj1,Matrix Obj2)
+        {
+            Matrix obj = new Matrix(obj1.a+Obj2.a, obj1.b + Obj2.b, obj1.c + Obj2.c, obj1.d + Obj2.d);
+            return obj;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Matrix m1= new Matrix(1,1,1,1);
+            Matrix m2 = new Matrix(1, 1, 1, 1);
+
+            //advance approach using operating overloading
+            Matrix m33=m1 + m2;
+            Console.WriteLine(m33);
+            Console.WriteLine();
+
+
+            //premitive way violating the code reusability rule and aslo inccreses the complexity of the code
+
+            Matrix m3 = new Matrix(1, 1, 1, 1);
+            Matrix m4 = new Matrix(1, 1, 1, 1);
+            Matrix m5 = new Matrix(1, 1, 1, 1);
+            Matrix m6 = new Matrix(1, 1, 1, 1);
+            Matrix m7 = new Matrix(1, 1, 1, 1);
+            Matrix m8 = new Matrix(1, 1, 1, 1);
+            Matrix m9 = new Matrix(1, 1, 1, 1);
+            Matrix m10 = new Matrix(1, 1, 1, 1);
+            Matrix m11 = new Matrix(1, 1, 1, 1);
+            Matrix m12 = new Matrix(1, 1, 1, 1);
+            Matrix m13 = new Matrix(1, 1, 1, 1);
+            Matrix m14 = new Matrix(1, 1, 1, 1);
+            Matrix m15 = new Matrix(1, 1, 1, 1);
+            Matrix m16 = new Matrix(1, 1, 1, 1);
+            Matrix m17 = new Matrix(1, 1, 1, 1);
+            Matrix m18 = new Matrix(1, 1, 1, 1);
+
+            Console.WriteLine($"{m1.a + m2.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m3.a + m4.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m5.a + m6.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m7.a + m8.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m9.a + m10.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m11.a + m12.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m13.a + m14.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m15.a + m16.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+            Console.WriteLine($"{m17.a + m18.a}        {m1.b + m2.b}\n{m1.c + m2.c}        {m1.d + m2.d}");
+
+        }
+    }
+}
