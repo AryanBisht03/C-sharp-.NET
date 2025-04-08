@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace interfaces
+{
+    interface t1
+    {
+        void add(int a,int b);
+        void subtract(int a,int b);
+    }
+    interface t2
+    {
+        void mutiply(int a,int b);
+        void divide(int a,int b);
+    }
+    
+    interface t3 : t1, t2
+    {
+        void modulo(int a,int b);
+    }
+
+    internal class Program:t3
+    {
+        public int a, b;
+        public Program(int a,int b)
+        {
+            this.a = a; 
+            this.b = b;
+        }
+        void t1.add(int a,int b)
+        {
+            int sum = 0;
+            sum = a + b;
+            Console.WriteLine("th sum of "+a+" and "+b+" is "+sum);
+        }
+
+        void t1.subtract(int a,int b)
+        {
+            int sub = 0;
+            sub = a - b;
+            Console.WriteLine("th subtraction of " + a + " and " + b + " is " + sub);
+
+        }
+
+        void t2.mutiply(int a,int b)
+        {
+            int mul = 1;
+            mul = a * b;
+            Console.WriteLine("th mul of " + a + " and " + b + " is " + mul);
+
+        }
+
+        void t2.divide(int a,int b)
+        {
+            int divvv = 0;
+            divvv = a / b;
+            Console.WriteLine("th division of " + a + " and " + b + " is " + divvv);
+
+        }
+
+        void t3.modulo(int a, int b)
+        {
+            int modd = 0;
+            modd = a % b;
+            Console.WriteLine("th modd of " + a + " and " + b + " is " + modd);
+        }
+        static void Main(string[] args)
+        {
+            int a=int.Parse(Console.ReadLine());
+            int b=int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the value of a ");
+            Program program = new Program(a,b);
+            t3 t = program;
+            t.add(a,b); 
+            t.divide(a,b);      
+            t.modulo(a,b);  
+            t.subtract(a,b);
+            t.mutiply(a,b);
+            
+            
+        }
+    }
+}
