@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//Create a C# program using multicast delegates to perform addition, 
+//    subtraction, multiplication, and division operations.
+//    Demonstrate how to attach and detach methods from the 
+//    delegate and invoke all the operations using a single delegate call
+namespace ConsoleApp7
+{
+    public delegate void maths(int a, int b);
+    internal class Program
+    {
+        public void add(int a,int b)
+        {
+            Console.WriteLine("The sum of a and b is "+(a+b));
+        }
+
+        public void sub(int a,int b) {
+
+            Console.WriteLine("The subtraction of a and b is " + (a - b));
+        }
+
+        public void mul(int a,int b) {
+
+            Console.WriteLine("The multiplication of a and b is " + (a * b));
+        }
+
+        public void div(int a, int b)
+        {
+
+            Console.WriteLine("The division of a and b is " + (a / b));
+        }
+
+        static void Main(string[] args)
+        {
+            Program p=new Program();
+            maths m = new maths(p.add);
+            m += p.sub;
+            m+= p.mul;
+            m+= p.div;
+            m(12,12);
+        }
+    }
+}
