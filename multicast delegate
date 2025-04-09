@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    public delegate void addition(double a, double b);
+
+    internal class Program
+    {
+        public void add(double a,double b)
+        {
+            Console.WriteLine(a + b);
+        }
+        public void sub(double a, double b)
+        {
+            Console.WriteLine( a - b);
+        }
+
+        public void mul(double a, double b)
+        {
+           Console.WriteLine((double)a * (double)b);
+        }
+
+        static void Main(string[] args)
+        {
+             Program p=new Program();
+            addition a = new addition(p.add);
+            a += p.sub;
+            a += p.mul;
+            a.Invoke(12, 12);
+            
+        }
+    }
+}
