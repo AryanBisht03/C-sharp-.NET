@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//Write a program where you loop from 1 to 5 
+//and use an anonymous method to print the square of each number inside the loop.
+namespace ConsoleApp13
+{
+    internal class Program
+    {
+        public delegate void loops(int num);
+        static void Main(string[] args)
+        {
+            int num = int.Parse(Console.ReadLine());
+            loops l = delegate (int nume)
+            {
+                for (int i = 1; i <= nume; i++)
+                { 
+                Console.WriteLine(i*i);
+                }
+            };
+            l(num);
+        }
+    }
+}
