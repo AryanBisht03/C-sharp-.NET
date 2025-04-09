@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//Create a multicast delegate that:
+//First prints square of a number
+//Then prints cube of a number
+//BUT only invoke square if the number is even, else only invoke cube.
+
+// made the program using anonymous functions
+namespace ConsoleApp11
+{
+    internal class Program
+    {
+        public delegate int sc(int a);
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter the number");
+            int num=int.Parse(Console.ReadLine());
+            
+            if (num % 2 == 0)
+            {
+                sc s = delegate (int n)
+                {
+                    return n * n;
+                };
+                int result = s(num);
+                Console.WriteLine("The square of the number is "+result);
+            }
+            else {
+                sc o = delegate (int n2)
+                {
+                    return (n2 * n2 * n2);
+                };
+                int result = o(num);
+                Console.WriteLine("The cube of the number is "+result);
+            }
+
+        }
+    }
+}
