@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//Write a C# program using anonymous functions where:
+
+//You take two integers as input from the user.
+
+//Use an anonymous function to:
+
+//Add the numbers if both are even.
+
+//Subtract if both are odd.
+
+//Multiply if one is even and one is odd.
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        public delegate int maths(int a,int b);
+        static void Main(string[] args)
+        {
+            Program p=new Program();
+            maths m = delegate (int a, int b)
+            {
+                if (a % 2 == 0 && b % 2 == 0)
+                    return a + b;
+                else if (a % 2 != 0 && b % 2 != 0)
+                {
+                    return a - b;
+                }
+                else 
+                {
+                    return a * b;
+                }
+            };
+            int result = m.Invoke(11,12);
+            Console.WriteLine(result);  
+        }
+    }
+}
