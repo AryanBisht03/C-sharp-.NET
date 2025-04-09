@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+//Create a multicast delegate that:
+//First prints square of a number
+//Then prints cube of a number
+//BUT only invoke square if the number is even, else only invoke cube.
+namespace ConsoleApp12
+{
+    public delegate int sc(int num);
+    internal class Program
+    {
+        public int square(int num)
+        {
+            return num * num;
+        }
+        public int cube(int num)
+        {
+            return num * num*num;
+        }
+
+        static void Main(string[] args)
+        {
+            Program p=new Program();
+            int num = int.Parse(Console.ReadLine());
+
+            if (num % 2 == 0)
+            {
+                sc s = new sc(p.square);
+                int re = s(num);
+                Console.WriteLine(re);
+            }
+            else
+            { 
+            sc s=new sc(p.cube);
+                int re = s(num);
+                Console.WriteLine(re);
+            }
+        }
+    }
+}
